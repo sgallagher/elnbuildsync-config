@@ -42,11 +42,6 @@ configuration:
         content_resolver: https://tiny.distro.builders
     exclude:
       rpms:
-        # shim has its own building proceedure
-        - shim
-        - shim-signed
-        - shim-unsigned-aarch64
-        - shim-unsigned-x64
         # it takes too much infra resources to try kernel builds automatically
         - kernel
         # In RHEL kernel-headers is a sub-package of kernel
@@ -67,6 +62,11 @@ configuration:
         - rubygem-rdoc
         # In RHEL rubygem-test-unit is a sub-package of ruby
         - rubygem-test-unit
+        # shim has its own building proceedure
+        - shim
+        - shim-signed
+        - shim-unsigned-aarch64
+        - shim-unsigned-x64
   defaults:
     rpms:
       source: "%(component)s.git#rawhide"
