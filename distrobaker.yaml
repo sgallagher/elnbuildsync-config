@@ -42,6 +42,9 @@ configuration:
         content_resolver: https://tiny.distro.builders
     exclude:
       rpms:
+        # This package defines the %{rhel} and %{eln} macros and we should not
+        # ever tag the Fedora version into ELN
+        - fedora-release
         # it takes too much infra resources to try kernel builds automatically
         - kernel
         # In RHEL kernel-headers is a sub-package of kernel
