@@ -40,11 +40,16 @@ configuration:
     autopackagelist:
         view: eln
         content_resolver: https://tiny.distro.builders
-    exclude:
+    skip_tag:
       rpms:
         # This package defines the %{rhel} and %{eln} macros and we should not
         # ever tag the Fedora version into ELN
         - fedora-release
+        # Rust cannot rebuild from the Fedora version due to incompatibility
+        # between the enabled build targets
+        - rust
+    exclude:
+      rpms:
         # it takes too much infra resources to try kernel builds automatically
         - kernel
         # In RHEL kernel-headers is a sub-package of kernel
@@ -65,10 +70,7 @@ configuration:
         - rubygem-rdoc
         # In RHEL rubygem-test-unit is a sub-package of ruby
         - rubygem-test-unit
-        # Rust cannot rebuild from the Fedora version due to incompatibility
-        # between the enabled build targets
-        - rust
-        # shim has its own building proceedure
+        # shim has its own building procedure
         - shim
         - shim-signed
         - shim-unsigned-aarch64
