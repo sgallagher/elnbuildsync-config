@@ -56,6 +56,8 @@ configuration:
         - kernel-headers
         # In RHEL kernel-tools is a sub-package of kernel
         - kernel-tools
+        # crypto-policies is manually synced from CentOS Stream
+        - crypto-policies
         # In RHEL rubygems is a sub-package of ruby
         - rubygems
         # In RHEL rubygem-json is a sub-package of ruby
