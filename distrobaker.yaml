@@ -16,9 +16,9 @@ configuration:
     profile: koji
     mbs: https://mbs.fedoraproject.org
   trigger:
-    rpms: f37
+    rpms: f38
     # This is a dummy value as modules are currently unsupported
-    modules: f37-modular
+    modules: f38-modular
   build:
     prefix: git+https://src.fedoraproject.org
     target: eln
