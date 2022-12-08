@@ -58,6 +58,8 @@ configuration:
         # Rawhide version in, since it may break dependent packages built
         # during the window between the tag and the rebuild.
         - ^selinux-policy$
+        # OCAML has special behavior and fedora builds cannot be mixed with ELN builds
+        - ^ocaml.*
 
     exclude:
       rpms:
