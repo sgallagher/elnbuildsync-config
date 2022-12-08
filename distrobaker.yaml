@@ -17,7 +17,6 @@ configuration:
     mbs: https://mbs.fedoraproject.org
   trigger:
     rpms: f38
-    # This is a dummy value as modules are currently unsupported
     modules: f38-modular
   build:
     prefix: git+https://src.fedoraproject.org
@@ -44,55 +43,54 @@ configuration:
       rpms:
         # This package defines the %{rhel} and %{eln} macros and we should not
         # ever tag the Fedora version into ELN
-        - fedora-release
+        - ^fedora-release$
         # Rust cannot rebuild from the Fedora version due to incompatibility
         # between the enabled build targets
-        - rust
+        - ^rust$
         # If other packages build against the Fedora LLVM, they will fail to
         # run against the ELN LLVM due to missing symbols. Avoid allowing LLVM
         # to tag the Fedora build into the buildroot.
-        - llvm
-        - clang
+        - ^llvm[0-9.]*
+        - ^clang[0-9.]$
         # The selinux-policy package provides RPM macros that other packages
         # use to set their minimum required policy (such as smartmon). This
         # dependency includes the %dist tag, meaning we cannot tag the Fedora
         # Rawhide version in, since it may break dependent packages built
         # during the window between the tag and the rebuild.
-        - selinux-policy
+        - ^selinux-policy$
+        # OCAML has special behavior and fedora builds cannot be mixed with ELN builds
+        - ^ocaml.*
 
     exclude:
       rpms:
         # it takes too much infra resources to try kernel builds automatically
-        - kernel
+        - ^kernel$
         # In RHEL kernel-headers is a sub-package of kernel
-        - kernel-headers
+        - ^kernel-headers$
         # In RHEL kernel-tools is a sub-package of kernel
-        - kernel-tools
+        - ^kernel-tools$
         # crypto-policies is manually synced from CentOS Stream
-        - crypto-policies
+        - ^crypto-policies$
         # In RHEL rubygems is a sub-package of ruby
-        - rubygems
+        - ^rubygems$
         # In RHEL rubygem-json is a sub-package of ruby
-        - rubygem-json
+        - ^rubygem-json$
         # In RHEL rubygem-minitest is a sub-package of ruby
-        - rubygem-minitest
+        - ^rubygem-minitest$
         # In RHEL rubygem-power_assert is a sub-package of ruby
-        - rubygem-power_assert
+        - ^rubygem-power_assert$
         # In RHEL rubygem-rake is a sub-package of ruby
-        - rubygem-rake
+        - ^rubygem-rake$
         # In RHEL rubygem-rdoc is a sub-package of ruby
-        - rubygem-rdoc
+        - ^rubygem-rdoc$
         # In RHEL rubygem-test-unit is a sub-package of ruby
-        - rubygem-test-unit
+        - ^rubygem-test-unit$
         # DistroBuildSync doesn't have permissions for secureboot packages
-        - grub2
-        - fwupd
-        - pesign
+        - ^grub2$
+        - ^fwupd$
+        - ^pesign$
         # shim has its own building procedure
-        - shim
-        - shim-signed
-        - shim-unsigned-aarch64
-        - shim-unsigned-x64
+        - ^shim.*
   defaults:
     rpms:
       source: "%(component)s.git#rawhide"
