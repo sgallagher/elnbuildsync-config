@@ -63,6 +63,10 @@ configuration:
         # redhat-rpm-config contains many fundamental macros and should not be
         # put into the ELN buildroot
         - ^redhat-rpm-config$
+        # The GTK packages are built with different optional features in ELN and
+        # as a result are not fully binary-compatible with Fedora
+        - gtk3
+        - gtk4
 
     exclude:
       rpms:
