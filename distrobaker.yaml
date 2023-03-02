@@ -100,6 +100,7 @@ configuration:
         - ^shim.*
         # texlive is manually maintained due to its complexity
         - texlive
+        - texlive-base
   defaults:
     rpms:
       source: "%(component)s.git#rawhide"
