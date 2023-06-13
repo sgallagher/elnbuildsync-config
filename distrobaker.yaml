@@ -67,6 +67,8 @@ configuration:
         # as a result are not fully binary-compatible with Fedora
         - gtk3
         - gtk4
+        # The Fedora builds include a kde (kwallet) subpackage which pulls in Qt5/KF5
+        - ^subversion$
 
     exclude:
       rpms:
@@ -102,11 +104,18 @@ configuration:
         - texlive
         - texlive-base
         # In RHEL, Rust packages are built with vendored dependencies
+        # These packages keep the vendoring changes in ELN branch
+        - ^clevis-pin-tpm2$
         - ^rust-cargo-c$
         - ^rust-imagequant-sys$
         - ^rust-rav1e$
         - ^rust-rpm-sequoia$
         - ^rust-sevctl$
+        - ^virtiofsd$
+        # Both netcat and nmap-ncat provide /usr/bin/nc; RHEL uses the latter
+        - ^netcat$
+        # RHEL-specific FIPS patches lag rawhide, being maintained in ELN branch
+        - ^golang$
   defaults:
     rpms:
       source: "%(component)s.git#rawhide"
