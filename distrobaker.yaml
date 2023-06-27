@@ -130,6 +130,8 @@ components:
   rpms:
     ipa:
       source: freeipa.git
+    ipa-healthcheck:
+      source: freeipa-healthcheck.git
     restore:
       source: dump.git
     rhel-system-roles:
