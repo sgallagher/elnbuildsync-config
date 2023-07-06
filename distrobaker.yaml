@@ -116,6 +116,13 @@ configuration:
         - ^netcat$
         # RHEL-specific FIPS patches lag rawhide, being maintained in ELN branch
         - ^golang$
+        # In RHEL golist is bundled, changes being maintained in ELN branch
+        - ^go-rpm-macros$
+        # These are built once for the oldest supported OS version and used for
+        # each OS version's openjdk package
+        - ^java-.*-openjdk-portable$
+        # RHEL build is client-only, being maintained in ELN branch
+        - ^ceph$
   defaults:
     rpms:
       source: "%(component)s.git#rawhide"
