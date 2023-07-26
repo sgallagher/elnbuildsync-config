@@ -97,6 +97,7 @@ configuration:
         # DistroBuildSync doesn't have permissions for secureboot packages
         - ^grub2$
         - ^fwupd$
+        - ^fwupd-efi$
         - ^pesign$
         # shim has its own building procedure
         - ^shim.*
