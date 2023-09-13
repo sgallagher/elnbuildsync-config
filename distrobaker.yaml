@@ -109,6 +109,7 @@ configuration:
         - texlive-base
         # In RHEL, Rust packages are built with vendored dependencies
         # These packages keep the vendoring changes in ELN branch
+        - ^python-rpds-py$
         - ^rust-rpm-sequoia$
         - ^rust-sevctl$
         - ^virtiofsd$
