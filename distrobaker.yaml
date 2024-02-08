@@ -129,6 +129,8 @@ configuration:
         # Maintained in the ELN branch
         # https://issues.redhat.com/browse/CS-1661
         - ^qemu$
+        # Temporarily block pulling in an unstable release during branching
+        - ^gstreamer1.*
     ordering:
       # Default ordering value is 1000 if not listed here
       rpms:
