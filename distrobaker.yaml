@@ -129,6 +129,8 @@ configuration:
         # Maintained in the ELN branch
         # https://issues.redhat.com/browse/CS-1661
         - ^qemu$
+        # Temporarily block openssl 3.2 due to possible breakages
+        - ^openssl$
     ordering:
       # Default ordering value is 1000 if not listed here
       rpms:
