@@ -35,7 +35,7 @@ configuration:
   control:
     build: true
     merge: false
-    pause: false
+    pause: true
     strict: true
     autopackagelist:
         view: [ eln, eln-extras ]
