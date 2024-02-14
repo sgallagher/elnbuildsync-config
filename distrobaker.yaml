@@ -16,8 +16,8 @@ configuration:
     profile: koji
     mbs: https://mbs.fedoraproject.org
   trigger:
-    rpms: f40
-    modules: f40-modular
+    rpms: f41
+    modules: f10-modular
   build:
     prefix: git+https://src.fedoraproject.org
     target: eln
