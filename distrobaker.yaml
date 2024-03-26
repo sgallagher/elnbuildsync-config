@@ -133,6 +133,8 @@ configuration:
         # Maintained in the ELN branch
         # https://issues.redhat.com/browse/CS-1661
         - ^qemu$
+        # This was previously separate, now is a subpackage of glibc
+        - ^glibc32$
     ordering:
       # Default ordering value is 1000 if not listed here
       rpms:
