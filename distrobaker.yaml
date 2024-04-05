@@ -135,6 +135,9 @@ configuration:
         - ^qemu$
         # This was previously separate, now is a subpackage of glibc
         - ^glibc32$
+        # This is a special build of libxcrypt that includes a -compat subpackage
+        # it is built for ELN directly
+        - libxcrypt-epel
     ordering:
       # Default ordering value is 1000 if not listed here
       rpms:
