@@ -86,6 +86,8 @@ configuration:
         # The Fedora builds use /usr/bin/qemu-kvm, where RHEL/ELN use /usr/libexec/qemu-kvm,
         # which breaks the build of virt-v2v.  Also includes ocaml bindings.
         - ^libguestfs$
+        # The source of /etc/dnf/dnf.conf differs between Fedora and ELN.
+        - ^dnf$
 
     exclude:
       rpms:
