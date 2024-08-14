@@ -36,7 +36,7 @@ configuration:
   control:
     build: true
     merge: false
-    pause: true
+    pause: false
     strict: true
     db:
       host: psql1.stream.rdu2.redhat.com
