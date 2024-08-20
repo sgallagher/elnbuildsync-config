@@ -124,6 +124,8 @@ configuration:
         - ^maturin$
         - ^python-rpds-py$
         - ^rust-rpm-sequoia$
+        - ^rust-sequoia-sq$
+        - ^rust-sequoia-sqv$
         - ^rust-sevctl$
         - ^virtiofsd$
         # Both netcat and nmap-ncat provide /usr/bin/nc; RHEL uses the latter
