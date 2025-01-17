@@ -52,6 +52,9 @@ configuration:
         # This package defines the %{rhel} and %{eln} macros and we should not
         # ever tag the Fedora version into ELN
         - ^fedora-release$
+        # The Fedora and RHEL toolchains are configured differently
+        - ^binutils$
+        - ^gcc$
         # Rust cannot rebuild from the Fedora version due to incompatibility
         # between the enabled build targets
         - ^rust$
