@@ -82,8 +82,8 @@ configuration:
         - ^redhat-rpm-config$
         # The GTK packages are built with different optional features in ELN and
         # as a result are not fully binary-compatible with Fedora
-        - gtk3
-        - gtk4
+        - ^gtk3$
+        - ^gtk4$
         # The Fedora builds include a kde (kwallet) subpackage which pulls in Qt5/KF5
         - ^subversion$
         # The Fedora builds use /usr/bin/qemu-kvm, where RHEL/ELN use /usr/libexec/qemu-kvm,
@@ -150,6 +150,8 @@ configuration:
         - libxcrypt-epel
         # RHEL changes are being maintained in ELN branch
         - ^linux-system-roles$
+        # ELN branch: https://issues.redhat.com/browse/CS-2755
+        - ^open-vm-tools$
     ordering:
       # Default ordering value is 1000 if not listed here
       rpms:
