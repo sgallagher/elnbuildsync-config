@@ -154,6 +154,7 @@ configuration:
         - command-line-assistant
         - container-tools
         - insights-client
+        - insights-core-selinux
         - kpatch
         - libguestfs-fssupport
         - libguestfs-winsupport
