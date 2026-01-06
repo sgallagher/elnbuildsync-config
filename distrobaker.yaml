@@ -157,24 +157,18 @@ configuration:
         # Build takes over 24h on ELN
         - rocsolver
         # ELN placeholders
-        - ansible-collection-redhat-rhel_mgmt
-        - bfscripts
         - command-line-assistant
         - container-tools
         - fips-provider-next
         - flatpak-runtime-config
         - insights-client
         - insights-core
-        - insights-core-selinux
         - kpatch
         - libguestfs-fssupport
         - libguestfs-winsupport
         - mingw-qemu-ga-win
-        - mlxbf-bootctl
-        - mpitests
         - openssl-fips-provider
         - opentelemetry-collector
-        - opentelemetry-collector-cloudwatch-config
         - redhat-bookmarks
         - redhat-cloud-client-configuration
         - redhat-indexhtml
@@ -184,6 +178,7 @@ configuration:
         - resource-agents-sap-hana
         - resource-agents-sap-hana-scaleout
         - rhc
+        - rhc-playbook-verifier
         - rhc-worker-playbook
         - rhel-system-roles-sap
         - sap-cluster-connector
