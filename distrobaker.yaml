@@ -155,7 +155,7 @@ configuration:
         - fence-agents
         - pcs
         # Build takes over 24h on ELN
-        - rocserver
+        - rocsolver
         # ELN placeholders
         - ansible-collection-redhat-rhel_mgmt
         - bfscripts
