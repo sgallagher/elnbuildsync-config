@@ -130,8 +130,6 @@ configuration:
         - ^rust-sequoia-sqv$
         - ^rust-sevctl$
         - ^virtiofsd$
-        # Both netcat and nmap-ncat provide /usr/bin/nc; RHEL uses the latter
-        - ^netcat$
         # RHEL-specific FIPS patches lag rawhide, being maintained in ELN branch
         - ^golang$
         # In RHEL golist is bundled, changes being maintained in ELN branch
