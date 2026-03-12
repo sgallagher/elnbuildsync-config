@@ -36,7 +36,7 @@ configuration:
   control:
     build: true
     merge: false
-    pause: false
+    pause: true
     strict: true
     update_batch_size: 750
     db:
