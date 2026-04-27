@@ -19,7 +19,7 @@ configuration:
   # Set to false to disable email.
   email: false
   control:
-    pause: true
+    pause: false
     status_interval: 600
     skip_tag:
       # The Fedora and RHEL toolchains are configured differently
