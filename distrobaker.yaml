@@ -162,7 +162,6 @@ configuration:
       ^llvm[0-9\.]*$: 0
       ^clang[0-9\.]*$: 1
       ^nettle$: 500
-      ^freeipa$: 1001
       ^ipa$: 1001
 components:
   autopackagelist:
