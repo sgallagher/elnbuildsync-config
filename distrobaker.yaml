@@ -17,7 +17,14 @@ configuration:
   # Set to false to disable /trigger authentication. Production may supply real OIDC via deployment.
   open_id_connect: false
   # Set to false to disable email.
-  email: false
+  email:
+    smtp_host: smtp-auth-iso01.fedoraproject.org
+    smtp_port: 587
+    smtp_username: elnbuildsync
+    from: eln-buildsync@fedoraproject.org
+    recipients:
+      - emerging-rhel-automation@redhat.com
+
   control:
     pause: false
     status_interval: 600
