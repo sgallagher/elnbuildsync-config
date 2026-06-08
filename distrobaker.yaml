@@ -147,7 +147,6 @@ configuration:
       - ^resource-agents-sap$
       - ^resource-agents-sap-hana$
       - ^resource-agents-sap-hana-scaleout$
-      - ^rhc$
       - ^rhc-playbook-verifier$
       - ^rhc-worker-playbook$
       - ^rhel-system-roles-sap$
