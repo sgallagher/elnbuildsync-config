@@ -139,6 +139,8 @@ configuration:
       - ^mingw-qemu-ga-win$
       - ^openssl-fips-provider$
       - ^opentelemetry-collector$
+      - ^radii$
+      - ^radii-hwdata-nv$
       - ^redhat-bookmarks$
       - ^redhat-cloud-client-configuration$
       - ^redhat-indexhtml$
