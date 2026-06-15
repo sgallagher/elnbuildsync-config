@@ -1,6 +1,6 @@
 configuration:
   koji:
-    profile: koji
+    profile: stg
     trigger_tag: f45
     build_target: eln
     stable_tag: eln
